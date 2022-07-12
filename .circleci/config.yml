@@ -16,9 +16,8 @@ jobs:
     steps:
       - checkout
       - run: echo "text to output here" > output.txt
-    
       - persist_to_workspace:
-          output: /tmp/workspace
+          root: /tmp/workspace
           paths:
             - output.txt
         
